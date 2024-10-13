@@ -1,0 +1,25 @@
+/* nav.css */
+.navbar {
+  position: relative; /* Ensure the navbar is positioned correctly */
+}
+
+.underline-link {
+  position: relative;
+  text-decoration: none; /* Remove default underline */
+}
+
+.underline-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust the position of the underline */
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: currentColor; /* Use the current text color */
+  transform: scaleX(0); /* Initially scale down to 0 */
+  transition: transform 0.3s ease; /* Animation transition */
+}
+
+.underline-link:hover::after {
+  transform: scaleX(1); /* Scale to full width on hover */
+}
